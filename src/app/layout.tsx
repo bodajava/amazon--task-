@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import NavBar from "./_Components/NavBra/NavBar";
+import { Toaster } from "@/components/ui/sonner";
+import MySessionProvider from "@/mySesstionProvider/mySesstionProvider";  // ✅ استخدم ده
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <MySessionProvider>
+          <NavBar />
+          {children}
+          <Toaster richColors />
+        </MySessionProvider>
       </body>
     </html>
   );
