@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from "@/components/ui/button"
-import { ProductType } from '@/Types/Product.Types'
+import { ProductType } from '@/Type/Product.type'
 
 interface DeatilseProps {
   data: ProductType
