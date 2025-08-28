@@ -1,18 +1,14 @@
-"use client"
 import React from 'react'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import Link from 'next/link'  
-import { ProductType } from "@/Types/Product.Types"  
+import Link from 'next/link'
+import { ProductType } from '@/Type/Product.type'
 
-export default function SingleProduct({ product }: { product: ProductType }) {
+interface SingleProductProps {
+  product: ProductType
+}
+
+export default function SingleProduct({ product }: SingleProductProps) {
   return (
     <div className="w-full md:w-1/2 lg:w-1/4 xl:w-1/5 p-4">
       <Card className='p-2 cursor-pointer'>

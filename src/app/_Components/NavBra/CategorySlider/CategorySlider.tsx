@@ -1,17 +1,11 @@
 import AllCategoris from '@/api/AllCategoris'
-import { log } from 'console'
 import React from 'react'
-import { Image } from 'next/image';
-import CategordeSwiper from './CategordeSwiper';
+import CategordeSwiper from './CategordeSwiper'
+import { CategoryType } from '@/Type/Category.type';
 
 export default async function CategorySlider() {
-
-    let data  = await AllCategoris()
-    console.log(data);
+const data: CategoryType[] = await AllCategoris()
+  console.log(data)
     
-  return (
-  <>
-                <CategordeSwiper data={data} />
-  </>
-  )
+  return <CategordeSwiper data={data} />
 }

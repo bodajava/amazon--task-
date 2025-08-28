@@ -1,4 +1,4 @@
-import Image from "next/image";
+ import Image from "next/image";
 import MainSlider from "./MainSlider/MainSlider";
 import CategorySlider from "./_Components/NavBra/CategorySlider/CategorySlider";
 import AllProducts from "./_Components/NavBra/AllProduts/AllProducts";

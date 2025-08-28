@@ -6,7 +6,7 @@ import 'swiper/css';
 
 import { Autoplay } from 'swiper/modules'
 import Image from 'next/image';
-import { CategoryType } from '@/Types/Category.Types';
+import { CategoryType } from '@/Type/Category.type';
 
 interface CategordeSwiperProps {
   data: CategoryType[];

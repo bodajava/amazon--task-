@@ -1,9 +1,13 @@
 import React from 'react'
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
+import { ProductType } from '@/Types/Product.Types'
 
-export default function Deatilse({data}) {
+interface DeatilseProps {
+  data: ProductType
+}
+
+export default function Deatilse({ data }: DeatilseProps) {
   return (
-<>
     <div className="container w-[90%] p-4 mx-auto flex flex-col md:flex-row gap-8">
       <div className="w-full md:w-1/3">
         <div className="p-4">
@@ -30,6 +34,5 @@ export default function Deatilse({data}) {
         </div>
       </div>
     </div>
-</>
   )
 }

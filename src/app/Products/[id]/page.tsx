@@ -1,15 +1,15 @@
-import React from "react";
+import React from "react"
 import SelectedProduct from '@/api/SelectedProduct'
-import Deatilse from "@/app/_Components/NavBra/Deatilse/Deatilse";
+import Deatilse from "@/app/_Components/NavBra/Deatilse/Deatilse"
+import { ProductType } from '@/Types/Product.Types'
 
+interface ProductDeaitelsProps {
+  params: {
+    id: string
+  }
+}
 
-export default async function ProductDeaitels({ params }) {
-  const { id } = params;
-let data = await SelectedProduct(id)
-
-  return (
-<>
-<Deatilse data={data} />
-</>
-  );
+export default async function ProductDeaitels({ params }: ProductDeaitelsProps) {
+  const data: ProductType = await SelectedProduct(params.id)
+  return <Deatilse data={data} />
 }
